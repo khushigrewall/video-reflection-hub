@@ -73,7 +73,7 @@ const JournalTracker = () => {
         </div>
 
         {/* Video Generation Status */}
-        {daysCompleted === totalDays && (
+        {daysCompleted >= totalDays && (
           <div className="text-center p-4 bg-slate-100 rounded-xl">
             <Video className="w-8 h-8 text-slate-600 mx-auto mb-2" />
             <p className="text-slate-700 font-inter font-medium">
