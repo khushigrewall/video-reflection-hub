@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
-import { Sparkles, Video } from 'lucide-react';
+import { Sparkles, Video, Heart } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const JournalingSection = () => {
@@ -12,11 +12,11 @@ const JournalingSection = () => {
   const { toast } = useToast();
 
   const dailyPrompts = [
-    "What made you feel grateful today?",
-    "What challenge did you overcome today?", 
-    "What moment brought you the most joy?",
-    "What did you learn about yourself today?",
-    "What are you looking forward to tomorrow?"
+    "What made you smile today?",
+    "What challenge helped you grow today?", 
+    "What moment felt like pure magic?",
+    "What are you proud of yourself for today?",
+    "What made your heart feel full today?"
   ];
 
   const todaysPrompt = dailyPrompts[Math.floor(Math.random() * dailyPrompts.length)];
@@ -24,8 +24,8 @@ const JournalingSection = () => {
   const handleGenerateVideo = async () => {
     if (!journalText.trim()) {
       toast({
-        title: "Please write something first",
-        description: "Add some thoughts to your journal before generating a video.",
+        title: "Write something first ✨",
+        description: "Share your thoughts before creating your video memory.",
         variant: "destructive"
       });
       return;
@@ -37,8 +37,8 @@ const JournalingSection = () => {
     setTimeout(() => {
       setIsGenerating(false);
       toast({
-        title: "Video generation started!",
-        description: "Your AI video is being created. Check your email shortly for the result.",
+        title: "Creating your video! 🎬",
+        description: "Your reflection is being transformed into a beautiful memory.",
       });
     }, 2000);
   };
@@ -46,22 +46,22 @@ const JournalingSection = () => {
   return (
     <section className="w-full max-w-4xl mx-auto px-4 py-12">
       <div className="text-center mb-8 animate-fade-in">
-        <h2 className="text-4xl md:text-5xl font-inter font-bold text-white mb-4">
-          Write Today's Reflection
+        <h2 className="text-4xl md:text-5xl font-inter font-light text-slate-700 mb-4">
+          Today's Reflection
         </h2>
-        <p className="text-white/80 text-lg font-inter max-w-2xl mx-auto">
-          Capture your thoughts, feelings, and experiences. Our AI will transform them into a beautiful video memory.
+        <p className="text-slate-600 text-lg font-inter max-w-2xl mx-auto font-light">
+          A safe space for your thoughts, feelings, and moments that matter
         </p>
       </div>
 
-      <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8 rounded-2xl shadow-2xl">
+      <Card className="bg-white/70 backdrop-blur-sm border-slate-200 p-8 rounded-2xl shadow-sm">
         {/* Daily Prompt */}
-        <div className="mb-6 p-4 bg-white/10 rounded-xl border border-white/20">
+        <div className="mb-6 p-4 bg-slate-50 rounded-xl border border-slate-100">
           <div className="flex items-center space-x-2 mb-2">
-            <Sparkles className="w-5 h-5 text-yellow-300" />
-            <span className="text-white/90 font-inter font-medium">Today's Prompt</span>
+            <Heart className="w-5 h-5 text-slate-500" />
+            <span className="text-slate-600 font-inter font-medium">Today's gentle prompt</span>
           </div>
-          <p className="text-white/80 font-inter italic">
+          <p className="text-slate-700 font-inter italic font-light">
             "{todaysPrompt}"
           </p>
         </div>
@@ -71,11 +71,11 @@ const JournalingSection = () => {
           <Textarea
             value={journalText}
             onChange={(e) => setJournalText(e.target.value)}
-            placeholder="Start typing your thoughts here..."
-            className="min-h-[300px] bg-white/10 border-white/20 text-white placeholder:text-white/50 font-inter text-lg leading-relaxed resize-none focus:bg-white/15 transition-all duration-200"
+            placeholder="Let your thoughts flow here..."
+            className="min-h-[300px] bg-white/50 border-slate-200 text-slate-700 placeholder:text-slate-400 font-inter text-lg leading-relaxed resize-none focus:bg-white/70 transition-all duration-200 rounded-xl"
           />
           <div className="mt-2 text-right">
-            <span className="text-white/50 text-sm font-inter">
+            <span className="text-slate-400 text-sm font-inter font-light">
               {journalText.length} characters
             </span>
           </div>
@@ -86,24 +86,24 @@ const JournalingSection = () => {
           <Button
             onClick={handleGenerateVideo}
             disabled={isGenerating}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-6 text-lg font-inter font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-50"
+            className="bg-slate-600 hover:bg-slate-700 text-white px-8 py-6 text-lg font-inter font-medium rounded-xl shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50"
           >
             {isGenerating ? (
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
-                Generating Video...
+                Creating your memory...
               </>
             ) : (
               <>
-                <Video className="w-6 h-6 mr-3" />
-                Generate Video Summary
+                <Sparkles className="w-6 h-6 mr-3" />
+                Transform into Video
               </>
             )}
           </Button>
           
           {isGenerating && (
-            <p className="text-white/70 text-sm font-inter mt-3 animate-fade-in">
-              This may take a few moments. You'll receive an email when ready!
+            <p className="text-slate-500 text-sm font-inter mt-3 animate-fade-in font-light">
+              This magical process takes a few moments ✨
             </p>
           )}
         </div>
