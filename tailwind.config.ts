@@ -23,7 +23,7 @@ export default {
 				'inter': ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-				'reflect-gradient': 'linear-gradient(135deg, #FFBB94 0%, #CBA3F1 100%)',
+				'reflect-gradient': 'linear-gradient(135deg, #FF8A65 0%, #FFAB91 50%, #FF7043 100%)',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
