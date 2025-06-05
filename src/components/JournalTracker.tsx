@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { CheckCircle, Circle, Video } from 'lucide-react';
+import { CheckCircle, Circle, Video, Crown } from 'lucide-react';
 
 const JournalTracker = () => {
   // Simulate current progress - 6 out of 7 days completed
@@ -17,7 +17,7 @@ const JournalTracker = () => {
 
   return (
     <section className="w-full max-w-4xl mx-auto px-4 py-8">
-      <Card className="bg-white/70 backdrop-blur-sm border-slate-200 p-6 rounded-2xl shadow-sm">
+      <Card className="bg-white/80 backdrop-blur-sm border-slate-200 p-6 rounded-2xl shadow-sm">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-inter font-semibold text-slate-700 mb-2">
             Your Weekly Progress
@@ -26,8 +26,8 @@ const JournalTracker = () => {
             {daysRemaining === 0 
               ? "🎉 Week complete! Your video is being generated."
               : daysRemaining === 1 
-                ? "One more day to get your video!"
-                : `${daysRemaining} more days to get your video!`
+                ? "One more day to get your weekly video!"
+                : `${daysRemaining} more days to get your weekly video!`
             }
           </p>
         </div>
@@ -84,6 +84,17 @@ const JournalTracker = () => {
             </p>
           </div>
         )}
+
+        {/* Subscription Notice */}
+        <div className="mt-6 p-4 bg-amber-50/50 rounded-xl border border-amber-200">
+          <div className="flex items-center space-x-2 mb-2">
+            <Crown className="w-5 h-5 text-amber-600" />
+            <span className="text-amber-700 font-inter font-medium">Subscription Required</span>
+          </div>
+          <p className="text-amber-600 font-inter text-sm font-light">
+            After your first month, you'll need a premium subscription to continue receiving weekly videos and access monthly recap videos.
+          </p>
+        </div>
       </Card>
     </section>
   );

@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { Play, Volume2, Calendar, Sparkles } from 'lucide-react';
+import { Play, Volume2, Calendar, Sparkles, Crown } from 'lucide-react';
 
 const VideoPreview = () => {
   return (
     <section className="w-full max-w-4xl mx-auto px-4 py-16">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-inter font-light text-slate-700 mb-4">
-          Your Reflections as Art
+          Your Journey as a Story
         </h2>
         <p className="text-slate-600 text-lg font-inter max-w-2xl mx-auto font-light">
           Weekly videos crafted from your journal entries — thoughtful, beautiful, and uniquely yours
@@ -17,7 +17,7 @@ const VideoPreview = () => {
 
       <div className="grid md:grid-cols-2 gap-8 items-center">
         {/* Video Preview Mockup */}
-        <Card className="bg-white/70 backdrop-blur-sm border-slate-200 p-6 rounded-2xl shadow-sm">
+        <Card className="bg-white/80 backdrop-blur-sm border-slate-200 p-6 rounded-2xl shadow-sm">
           <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl relative overflow-hidden">
             {/* Video Thumbnail */}
             <div className="absolute inset-0 flex items-center justify-center">
@@ -56,10 +56,10 @@ const VideoPreview = () => {
             </div>
             <div>
               <h3 className="text-slate-700 font-inter font-medium text-lg mb-2">
-                Thoughtful Visuals
+                Weekly Videos
               </h3>
               <p className="text-slate-600 font-inter font-light">
-                Beautiful imagery that captures the essence of your reflections
+                Complete 7 days of journaling to automatically receive your weekly video summary
               </p>
             </div>
           </div>
@@ -79,15 +79,16 @@ const VideoPreview = () => {
           </div>
 
           <div className="flex items-start space-x-4">
-            <div className="bg-slate-200/60 p-3 rounded-xl">
-              <Calendar className="w-6 h-6 text-slate-600" />
+            <div className="bg-amber-200/60 p-3 rounded-xl">
+              <Crown className="w-6 h-6 text-amber-600" />
             </div>
             <div>
               <h3 className="text-slate-700 font-inter font-medium text-lg mb-2">
-                Weekly Stories
+                Monthly Recaps
+                <span className="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full ml-2">Premium</span>
               </h3>
               <p className="text-slate-600 font-inter font-light">
-                Automatically crafted each week, preserving your journey
+                Get bi-weekly and monthly video summaries with premium subscription
               </p>
             </div>
           </div>
