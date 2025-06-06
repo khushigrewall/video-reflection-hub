@@ -8,17 +8,18 @@ import JournalCalendar from '@/components/JournalCalendar';
 import FeaturesSection from '@/components/FeaturesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import VideoPreview from '@/components/VideoPreview';
+import SubscriptionSection from '@/components/SubscriptionSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-purple-50 font-inter">
-      {/* Subtle Pattern Overlay */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #e11d48 1px, transparent 1px),
-                           radial-gradient(circle at 75% 75%, #a855f7 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+    <div className="min-h-screen bg-coral-gradient font-inter">
+      {/* Animated Pattern Overlay */}
+      <div className="absolute inset-0 opacity-[0.08]">
+        <div className="absolute inset-0 animate-pulse-slow" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, #fff 2px, transparent 2px),
+                           radial-gradient(circle at 75% 75%, #fff 1px, transparent 1px)`,
+          backgroundSize: '100px 100px'
         }} />
       </div>
       
@@ -33,6 +34,7 @@ const Index = () => {
           <FeaturesSection />
           <HowItWorksSection />
           <VideoPreview />
+          <SubscriptionSection />
         </main>
         
         <Footer />
