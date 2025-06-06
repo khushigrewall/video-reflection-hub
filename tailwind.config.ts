@@ -23,8 +23,8 @@ export default {
 				'inter': ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-				'coral-gradient': 'linear-gradient(135deg, #ff8a80 0%, #ffab91 25%, #ffcc80 50%, #fff8e1 75%, #ffab91 100%)',
-				'warm-gradient': 'linear-gradient(135deg, #ff9a8b 0%, #fecfef 50%, #ffc3a0 100%)',
+				'cream-gradient': 'linear-gradient(135deg, #faf7f0 0%, #f5f0e8 25%, #f0ebe3 50%, #ebe6de 75%, #e6e1d9 100%)',
+				'warm-gradient': 'linear-gradient(135deg, #faf7f0 0%, #f5f0e8 50%, #f0ebe3 100%)',
 				'sunset-gradient': 'linear-gradient(135deg, #fa709a 0%, #fee140 50%, #ff9a56 100%)',
 			},
 			colors: {
