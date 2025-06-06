@@ -23,7 +23,7 @@ export default {
 				'inter': ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-				'coral-gradient': 'linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 25%, #ffa726 50%, #ffcc80 75%, #ff6b6b 100%)',
+				'coral-gradient': 'linear-gradient(135deg, #ff8a80 0%, #ffab91 25%, #ffcc80 50%, #fff8e1 75%, #ffab91 100%)',
 				'warm-gradient': 'linear-gradient(135deg, #ff9a8b 0%, #fecfef 50%, #ffc3a0 100%)',
 				'sunset-gradient': 'linear-gradient(135deg, #fa709a 0%, #fee140 50%, #ff9a56 100%)',
 			},
