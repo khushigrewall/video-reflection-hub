@@ -20,14 +20,23 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-				'coral-gradient': 'linear-gradient(135deg, #ff8a80 0%, #ffab91 25%, #ffcc80 50%, #fff8e1 75%, #ffab91 100%)',
-				'warm-gradient': 'linear-gradient(135deg, #ff9a8b 0%, #fecfef 50%, #ffc3a0 100%)',
-				'sunset-gradient': 'linear-gradient(135deg, #fa709a 0%, #fee140 50%, #ff9a56 100%)',
+				'warm-gradient': 'linear-gradient(135deg, #FFF5EC 0%, #FFE4CC 100%)',
+				'peach-gradient': 'linear-gradient(135deg, #FF9456 0%, #FFE4CC 100%)',
+				'card-gradient': 'linear-gradient(135deg, #FFEEE6 0%, #FFF5EC 100%)',
 			},
 			colors: {
+				// Primary theme colors
+				'warm-brown': '#4B1F00',
+				'terracotta': '#E25E1C',
+				'peach': '#FF9456',
+				'cream': '#FFE4CC',
+				'light-cream': '#FFF5EC',
+				'soft-peach': '#FFEEE6',
+				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

@@ -13,12 +13,12 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-coral-gradient font-inter">
-      {/* Animated Pattern Overlay */}
-      <div className="absolute inset-0 opacity-[0.08]">
+    <div className="min-h-screen bg-warm-gradient font-poppins">
+      {/* Subtle Pattern Overlay */}
+      <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0 animate-pulse-slow" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #fff 2px, transparent 2px),
-                           radial-gradient(circle at 75% 75%, #fff 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle at 25% 25%, #4B1F00 2px, transparent 2px),
+                           radial-gradient(circle at 75% 75%, #E25E1C 1px, transparent 1px)`,
           backgroundSize: '100px 100px'
         }} />
       </div>
