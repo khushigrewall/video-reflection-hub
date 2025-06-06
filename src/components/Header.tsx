@@ -1,27 +1,36 @@
 
 import React from 'react';
+import { Button } from '@/components/ui/button';
+import { BookOpen, Sparkles } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="w-full py-6 px-4">
-      <div className="max-w-4xl mx-auto flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-slate-200/70 rounded-lg flex items-center justify-center">
-            <span className="text-slate-700 font-bold text-lg">R</span>
+    <header className="w-full py-6 px-4 bg-white/60 backdrop-blur-md border-b border-rose-100">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <div className="flex items-center space-x-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-rose-200 to-purple-200 rounded-xl flex items-center justify-center shadow-sm">
+            <BookOpen className="w-5 h-5 text-rose-700" />
           </div>
-          <h1 className="text-slate-700 font-inter font-semibold text-xl">Reflect AI</h1>
+          <div>
+            <h1 className="text-rose-900 font-inter font-bold text-2xl">Reflect AI</h1>
+            <p className="text-rose-600 text-xs font-light">Your mindful journaling companion</p>
+          </div>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#" className="text-slate-600 hover:text-slate-800 transition-colors font-inter font-medium">
-            About
-          </a>
-          <a href="#" className="text-slate-600 hover:text-slate-800 transition-colors font-inter font-medium">
+          <a href="#features" className="text-rose-700 hover:text-rose-900 transition-colors font-inter font-medium">
             Features
           </a>
-          <button className="bg-slate-200/70 hover:bg-slate-300/70 text-slate-700 px-6 py-2 rounded-full font-inter font-medium transition-all duration-200 backdrop-blur-sm">
-            Sign In
-          </button>
+          <a href="#how-it-works" className="text-rose-700 hover:text-rose-900 transition-colors font-inter font-medium">
+            How It Works
+          </a>
+          <a href="#pricing" className="text-rose-700 hover:text-rose-900 transition-colors font-inter font-medium">
+            Pricing
+          </a>
+          <Button className="bg-gradient-to-r from-rose-500 to-purple-500 hover:from-rose-600 hover:to-purple-600 text-white px-6 py-2 rounded-full font-inter font-medium transition-all duration-200 shadow-md hover:shadow-lg">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Get Started
+          </Button>
         </nav>
       </div>
     </header>

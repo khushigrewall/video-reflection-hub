@@ -23,7 +23,7 @@ export default {
 				'inter': ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-				'reflect-gradient': 'linear-gradient(135deg, #fefcfb 0%, #faf9f8 50%, #fcfbfa 100%)',
+				'reflect-gradient': 'linear-gradient(135deg, #fdf2f8 0%, #fefcfb 25%, #faf5ff 50%, #f8fafc 75%, #fdf2f8 100%)',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -101,12 +101,21 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out'
+				'fade-in': 'fade-in 0.6s ease-out',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
