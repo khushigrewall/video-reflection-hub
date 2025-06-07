@@ -14,7 +14,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen bg-warm-gradient font-poppins">
-      {/* Subtle Pattern Overlay */}
+      {/* Subtle Pattern Overlay with Animation */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0 animate-pulse-slow" style={{
           backgroundImage: `radial-gradient(circle at 25% 25%, #4B1F00 2px, transparent 2px),
@@ -24,20 +24,40 @@ const Index = () => {
       </div>
       
       <div className="relative z-10">
-        <Header />
+        <div className="animate-fade-in">
+          <Header />
+        </div>
         
         <main className="space-y-20">
-          <HeroSection />
-          <JournalingSection />
-          <JournalTracker />
-          <JournalCalendar />
-          <FeaturesSection />
-          <HowItWorksSection />
-          <VideoPreview />
-          <SubscriptionSection />
+          <div className="animate-fade-in">
+            <HeroSection />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <JournalingSection />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <JournalTracker />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <JournalCalendar />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            <FeaturesSection />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '1.0s' }}>
+            <HowItWorksSection />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '1.2s' }}>
+            <VideoPreview />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '1.4s' }}>
+            <SubscriptionSection />
+          </div>
         </main>
         
-        <Footer />
+        <div className="animate-fade-in" style={{ animationDelay: '1.6s' }}>
+          <Footer />
+        </div>
       </div>
     </div>
   );

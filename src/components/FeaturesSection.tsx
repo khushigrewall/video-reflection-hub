@@ -45,70 +45,72 @@ const FeaturesSection = () => {
 
   const getColorClasses = (color: string) => {
     const colorMap = {
-      rose: "bg-rose-100 text-rose-600",
-      purple: "bg-purple-100 text-purple-600",
-      orange: "bg-orange-100 text-orange-600",
-      pink: "bg-pink-100 text-pink-600",
-      green: "bg-green-100 text-green-600",
-      blue: "bg-blue-100 text-blue-600"
+      rose: "bg-soft-peach/60 text-terracotta",
+      purple: "bg-soft-peach/60 text-terracotta",
+      orange: "bg-soft-peach/60 text-terracotta",
+      pink: "bg-soft-peach/60 text-terracotta",
+      green: "bg-soft-peach/60 text-terracotta",
+      blue: "bg-soft-peach/60 text-terracotta"
     };
-    return colorMap[color as keyof typeof colorMap] || "bg-rose-100 text-rose-600";
+    return colorMap[color as keyof typeof colorMap] || "bg-soft-peach/60 text-terracotta";
   };
 
   return (
     <section id="features" className="w-full max-w-6xl mx-auto px-4 py-20">
       <div className="text-center mb-16">
-        <div className="inline-flex items-center bg-purple-50 border border-purple-200 rounded-full px-4 py-2 mb-6">
-          <Sparkles className="w-4 h-4 text-purple-600 mr-2" />
-          <span className="text-purple-700 font-inter text-sm font-medium">Powerful Features</span>
+        <div className="inline-flex items-center bg-soft-peach/60 backdrop-blur-md border border-cream/40 rounded-full px-6 py-3 mb-8 animate-float">
+          <Sparkles className="w-5 h-5 text-terracotta mr-2 animate-glow" />
+          <span className="text-warm-brown font-poppins text-sm font-medium">Powerful Features</span>
         </div>
         
-        <h2 className="text-4xl md:text-5xl font-inter font-bold text-rose-900 mb-6">
+        <h2 className="text-5xl md:text-6xl font-poppins font-bold text-warm-brown mb-6 animate-fade-in">
           Everything you need for
-          <span className="block text-purple-600">mindful journaling</span>
+          <span className="block bg-gradient-to-r from-terracotta to-peach bg-clip-text text-transparent animate-glow">
+            mindful journaling
+          </span>
         </h2>
         
-        <p className="text-xl text-rose-700 font-inter max-w-3xl mx-auto font-light">
+        <p className="text-xl text-warm-brown/70 font-poppins max-w-4xl mx-auto font-medium animate-fade-in" style={{ animationDelay: '0.1s' }}>
           From daily writing to AI-powered insights, we've built the complete toolkit for your personal growth journey.
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
-          <Card key={index} className="bg-white/70 backdrop-blur-sm border-rose-200 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${getColorClasses(feature.color)}`}>
-              <feature.icon className="w-7 h-7" />
+          <Card key={index} className="bg-card-gradient backdrop-blur-md border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group animate-fade-in" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
+            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 animate-float ${getColorClasses(feature.color)}`}>
+              <feature.icon className="w-8 h-8" />
             </div>
-            <h3 className="text-rose-900 font-inter font-semibold text-xl mb-3">
+            <h3 className="text-warm-brown font-poppins font-semibold text-xl mb-3">
               {feature.title}
             </h3>
-            <p className="text-rose-600 font-inter font-light leading-relaxed">
+            <p className="text-warm-brown/70 font-poppins font-medium leading-relaxed">
               {feature.description}
             </p>
           </Card>
         ))}
       </div>
 
-      {/* Premium Features */}
-      <div className="mt-16 p-8 bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl border border-amber-200">
+      {/* Premium Features with animation */}
+      <div className="mt-16 p-8 bg-card-gradient backdrop-blur-md rounded-3xl border border-cream/30 shadow-xl animate-fade-in" style={{ animationDelay: '0.8s' }}>
         <div className="flex items-center justify-center mb-6">
-          <Crown className="w-8 h-8 text-amber-600 mr-3" />
-          <h3 className="text-2xl font-inter font-bold text-amber-900">Premium Features</h3>
+          <Crown className="w-8 h-8 text-terracotta mr-3 animate-glow" />
+          <h3 className="text-2xl font-poppins font-bold text-warm-brown">Premium Features</h3>
         </div>
         
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="text-center">
-            <h4 className="text-amber-800 font-inter font-semibold text-lg mb-2">Monthly Recap Videos</h4>
-            <p className="text-amber-700 font-inter font-light">Get comprehensive monthly video summaries of your journaling journey.</p>
+          <div className="text-center animate-fade-in" style={{ animationDelay: '0.9s' }}>
+            <h4 className="text-warm-brown font-poppins font-semibold text-lg mb-2">Monthly Recap Videos</h4>
+            <p className="text-warm-brown/70 font-poppins font-medium">Get comprehensive monthly video summaries of your journaling journey.</p>
           </div>
-          <div className="text-center">
-            <h4 className="text-amber-800 font-inter font-semibold text-lg mb-2">Advanced Analytics</h4>
-            <p className="text-amber-700 font-inter font-light">Deep insights into your emotional patterns and personal growth trends.</p>
+          <div className="text-center animate-fade-in" style={{ animationDelay: '1.0s' }}>
+            <h4 className="text-warm-brown font-poppins font-semibold text-lg mb-2">Advanced Analytics</h4>
+            <p className="text-warm-brown/70 font-poppins font-medium">Deep insights into your emotional patterns and personal growth trends.</p>
           </div>
         </div>
         
-        <div className="text-center mt-6">
-          <p className="text-amber-600 font-inter text-sm">
+        <div className="text-center mt-6 animate-fade-in" style={{ animationDelay: '1.1s' }}>
+          <p className="text-warm-brown/60 font-poppins text-sm">
             Premium subscription required after your first month • Unlock advanced features and unlimited video generation
           </p>
         </div>

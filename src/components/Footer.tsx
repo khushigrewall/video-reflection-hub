@@ -1,72 +1,115 @@
 
 import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import { BookOpen, Mail, Twitter, Instagram, Heart } from 'lucide-react';
+import { BookOpen, Mail, Twitter, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
+  const footerLinks = {
+    product: [
+      { name: 'Features', href: '#features' },
+      { name: 'How it Works', href: '#how-it-works' },
+      { name: 'Pricing', href: '#pricing' },
+      { name: 'Help Center', href: '#' }
+    ],
+    company: [
+      { name: 'About Us', href: '#' },
+      { name: 'Blog', href: '#' },
+      { name: 'Careers', href: '#' },
+      { name: 'Contact', href: '#' }
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '#' },
+      { name: 'Terms of Service', href: '#' },
+      { name: 'Cookie Policy', href: '#' },
+      { name: 'GDPR', href: '#' }
+    ]
+  };
+
   return (
-    <footer className="w-full py-16 px-4 mt-20">
+    <footer className="w-full bg-card-gradient backdrop-blur-md border-t border-cream/30 py-16 px-4 animate-fade-in">
       <div className="max-w-6xl mx-auto">
-        <Separator className="bg-terracotta/30 mb-12" />
-        
         <div className="grid md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-soft-peach/60 backdrop-blur-md rounded-xl flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-terracotta" />
+          {/* Brand Section */}
+          <div className="md:col-span-1 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-peach-gradient rounded-2xl flex items-center justify-center shadow-lg animate-glow">
+                <BookOpen className="w-6 h-6 text-warm-brown" />
               </div>
-              <span className="text-warm-brown font-poppins font-bold text-xl">Journely</span>
+              <div>
+                <h3 className="text-warm-brown font-poppins font-bold text-xl">Journely</h3>
+                <p className="text-terracotta text-xs font-medium">Transform memories into videos</p>
+              </div>
             </div>
-            <p className="text-warm-brown/70 font-poppins text-sm leading-relaxed">
-              Transform your daily thoughts into beautiful video memories through the power of AI analysis.
+            <p className="text-warm-brown/70 font-poppins text-sm font-medium leading-relaxed mb-6">
+              Turn your daily thoughts into beautiful video memories with AI-powered journaling and analysis.
             </p>
-          </div>
-
-          {/* Product */}
-          <div className="space-y-4">
-            <h3 className="text-warm-brown font-poppins font-semibold">Product</h3>
-            <ul className="space-y-2">
-              <li><a href="#features" className="text-warm-brown/70 hover:text-terracotta transition-colors font-poppins text-sm">Features</a></li>
-              <li><a href="#how-it-works" className="text-warm-brown/70 hover:text-terracotta transition-colors font-poppins text-sm">How It Works</a></li>
-              <li><a href="#pricing" className="text-warm-brown/70 hover:text-terracotta transition-colors font-poppins text-sm">Pricing</a></li>
-              <li><a href="#" className="text-warm-brown/70 hover:text-terracotta transition-colors font-poppins text-sm">Mobile App</a></li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div className="space-y-4">
-            <h3 className="text-warm-brown font-poppins font-semibold">Support</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-warm-brown/70 hover:text-terracotta transition-colors font-poppins text-sm">Help Center</a></li>
-              <li><a href="#" className="text-warm-brown/70 hover:text-terracotta transition-colors font-poppins text-sm">Contact Us</a></li>
-              <li><a href="#" className="text-warm-brown/70 hover:text-terracotta transition-colors font-poppins text-sm">Privacy Policy</a></li>
-              <li><a href="#" className="text-warm-brown/70 hover:text-terracotta transition-colors font-poppins text-sm">Terms of Service</a></li>
-            </ul>
-          </div>
-
-          {/* Connect */}
-          <div className="space-y-4">
-            <h3 className="text-warm-brown font-poppins font-semibold">Connect</h3>
+            
+            {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="bg-soft-peach/60 backdrop-blur-md p-3 rounded-xl hover:bg-cream/60 transition-colors">
-                <Mail className="w-5 h-5 text-terracotta" />
+              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300 hover:scale-110">
+                <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-soft-peach/60 backdrop-blur-md p-3 rounded-xl hover:bg-cream/60 transition-colors">
-                <Twitter className="w-5 h-5 text-terracotta" />
+              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300 hover:scale-110">
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-soft-peach/60 backdrop-blur-md p-3 rounded-xl hover:bg-cream/60 transition-colors">
-                <Instagram className="w-5 h-5 text-terracotta" />
+              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300 hover:scale-110">
+                <Youtube className="w-5 h-5" />
               </a>
+              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300 hover:scale-110">
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Links Sections */}
+          <div className="md:col-span-3 grid md:grid-cols-3 gap-8">
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h4 className="text-warm-brown font-poppins font-semibold text-lg mb-4">Product</h4>
+              <ul className="space-y-3">
+                {footerLinks.product.map((link, index) => (
+                  <li key={index}>
+                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-all duration-300 hover:scale-105 inline-block">
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <h4 className="text-warm-brown font-poppins font-semibold text-lg mb-4">Company</h4>
+              <ul className="space-y-3">
+                {footerLinks.company.map((link, index) => (
+                  <li key={index}>
+                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-all duration-300 hover:scale-105 inline-block">
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <h4 className="text-warm-brown font-poppins font-semibold text-lg mb-4">Legal</h4>
+              <ul className="space-y-3">
+                {footerLinks.legal.map((link, index) => (
+                  <li key={index}>
+                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-all duration-300 hover:scale-105 inline-block">
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-        
-        <div className="text-center pt-8 border-t border-terracotta/30">
-          <p className="text-warm-brown/60 font-poppins text-sm font-medium flex items-center justify-center space-x-2">
-            <span>© 2025 Journely. Made with</span>
-            <Heart className="w-4 h-4 text-red-500" />
-            <span>for your memories.</span>
+
+        {/* Bottom Section */}
+        <div className="border-t border-cream/30 pt-8 flex flex-col md:flex-row justify-between items-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <p className="text-warm-brown/60 font-poppins text-sm font-medium mb-4 md:mb-0">
+            © 2024 Journely. All rights reserved.
+          </p>
+          <p className="text-warm-brown/60 font-poppins text-sm font-medium">
+            Made with ❤️ for mindful journaling
           </p>
         </div>
       </div>
