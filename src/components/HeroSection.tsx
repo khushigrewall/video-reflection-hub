@@ -13,19 +13,19 @@ const HeroSection = () => {
           <span className="text-warm-brown font-poppins text-sm font-medium">Document. Analyze. Remember.</span>
         </div>
         
-        <h1 className="text-6xl md:text-8xl font-poppins font-bold text-warm-brown mb-8 leading-tight">
+        <h1 className="text-6xl md:text-8xl font-poppins font-bold text-warm-brown mb-8 leading-tight animate-fade-in-up">
           Write Your
           <span className="block bg-gradient-to-r from-terracotta to-peach bg-clip-text text-transparent animate-glow">
             Life Story
           </span>
         </h1>
         
-        <p className="text-xl text-warm-brown/80 font-poppins max-w-4xl mx-auto mb-12 leading-relaxed font-medium">
+        <p className="text-xl text-warm-brown/80 font-poppins max-w-4xl mx-auto mb-12 leading-relaxed font-medium animate-fade-in-up-delayed">
           Anyone can write journals daily and track progress. After 7 consecutive days, 
           our AI analyzes your authentic entries and creates personalized video memories that capture your growth and insights.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-delayed">
           <Button className="bg-peach-gradient hover:opacity-90 text-warm-brown border border-cream/40 px-10 py-5 text-lg font-poppins font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <Video className="w-6 h-6 mr-3" />
             Start Your Journey
@@ -38,17 +38,17 @@ const HeroSection = () => {
 
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-6 rounded-2xl text-center hover:bg-soft-peach/40 transition-all duration-300 shadow-lg">
+          <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-6 rounded-2xl text-center hover:bg-soft-peach/40 transition-all duration-300 shadow-lg animate-fade-in-up" style={{animationDelay: '0.1s', animationFillMode: 'both'}}>
             <Users className="w-8 h-8 text-terracotta mx-auto mb-3" />
             <h3 className="text-2xl font-bold text-warm-brown mb-1">50K+</h3>
             <p className="text-warm-brown/70 font-medium">Active Journalers</p>
           </Card>
-          <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-6 rounded-2xl text-center hover:bg-soft-peach/40 transition-all duration-300 shadow-lg">
+          <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-6 rounded-2xl text-center hover:bg-soft-peach/40 transition-all duration-300 shadow-lg animate-fade-in-up" style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
             <Video className="w-8 h-8 text-terracotta mx-auto mb-3" />
             <h3 className="text-2xl font-bold text-warm-brown mb-1">100K+</h3>
             <p className="text-warm-brown/70 font-medium">Videos Generated</p>
           </Card>
-          <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-6 rounded-2xl text-center hover:bg-soft-peach/40 transition-all duration-300 shadow-lg">
+          <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-6 rounded-2xl text-center hover:bg-soft-peach/40 transition-all duration-300 shadow-lg animate-fade-in-up" style={{animationDelay: '0.3s', animationFillMode: 'both'}}>
             <Award className="w-8 h-8 text-terracotta mx-auto mb-3" />
             <h3 className="text-2xl font-bold text-warm-brown mb-1">98%</h3>
             <p className="text-warm-brown/70 font-medium">User Satisfaction</p>
@@ -58,7 +58,7 @@ const HeroSection = () => {
 
       {/* Feature Cards */}
       <div className="grid md:grid-cols-3 gap-8">
-        <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+        <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group animate-fade-in-up" style={{animationDelay: '0.4s', animationFillMode: 'both'}}>
           <div className="bg-soft-peach/60 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
             <Calendar className="w-8 h-8 text-terracotta" />
           </div>
@@ -68,7 +68,7 @@ const HeroSection = () => {
           </p>
         </Card>
 
-        <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+        <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group animate-fade-in-up" style={{animationDelay: '0.5s', animationFillMode: 'both'}}>
           <div className="bg-soft-peach/60 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
             <Brain className="w-8 h-8 text-terracotta" />
           </div>
@@ -78,7 +78,7 @@ const HeroSection = () => {
           </p>
         </Card>
 
-        <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+        <Card className="bg-card-gradient backdrop-blur-md border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group animate-fade-in-up" style={{animationDelay: '0.6s', animationFillMode: 'both'}}>
           <div className="bg-soft-peach/60 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
             <Video className="w-8 h-8 text-terracotta" />
           </div>

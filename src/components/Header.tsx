@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="w-full py-6 px-4 bg-soft-peach/40 backdrop-blur-lg border-b border-cream/30">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 animate-slide-in-left">
           <div className="w-12 h-12 bg-peach-gradient rounded-2xl flex items-center justify-center shadow-lg animate-glow">
             <BookOpen className="w-6 h-6 text-warm-brown" />
           </div>
@@ -17,7 +17,7 @@ const Header = () => {
           </div>
         </div>
         
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-8 animate-slide-in-right">
           <a href="#features" className="text-warm-brown hover:text-terracotta transition-colors font-poppins font-medium hover:scale-105 transform duration-200">
             Features
           </a>
@@ -33,7 +33,7 @@ const Header = () => {
           </Button>
         </nav>
 
-        <Button variant="ghost" className="md:hidden text-warm-brown hover:bg-cream/20">
+        <Button variant="ghost" className="md:hidden text-warm-brown hover:bg-cream/20 animate-fade-in">
           <Menu className="w-6 h-6" />
         </Button>
       </div>

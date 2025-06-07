@@ -24,20 +24,40 @@ const Index = () => {
       </div>
       
       <div className="relative z-10">
-        <Header />
+        <div className="animate-fade-in">
+          <Header />
+        </div>
         
         <main className="space-y-20">
-          <HeroSection />
-          <JournalingSection />
-          <JournalTracker />
-          <JournalCalendar />
-          <FeaturesSection />
-          <HowItWorksSection />
-          <VideoPreview />
-          <SubscriptionSection />
+          <div className="animate-fade-in-delayed">
+            <HeroSection />
+          </div>
+          <div className="animate-fade-in-up">
+            <JournalingSection />
+          </div>
+          <div className="animate-fade-in-up-delayed">
+            <JournalTracker />
+          </div>
+          <div className="animate-fade-in-up">
+            <JournalCalendar />
+          </div>
+          <div className="animate-fade-in-up-delayed">
+            <FeaturesSection />
+          </div>
+          <div className="animate-fade-in-up">
+            <HowItWorksSection />
+          </div>
+          <div className="animate-fade-in-up-delayed">
+            <VideoPreview />
+          </div>
+          <div className="animate-fade-in-up">
+            <SubscriptionSection />
+          </div>
         </main>
         
-        <Footer />
+        <div className="animate-fade-in-delayed-long">
+          <Footer />
+        </div>
       </div>
     </div>
   );
