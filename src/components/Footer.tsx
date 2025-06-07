@@ -25,13 +25,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-card-gradient backdrop-blur-md border-t border-cream/30 py-16 px-4 animate-fade-in">
+    <footer className="w-full bg-card-gradient backdrop-blur-md border-t border-cream/30 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand Section */}
-          <div className="md:col-span-1 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-peach-gradient rounded-2xl flex items-center justify-center shadow-lg animate-glow">
+              <div className="w-12 h-12 bg-peach-gradient rounded-2xl flex items-center justify-center shadow-lg">
                 <BookOpen className="w-6 h-6 text-warm-brown" />
               </div>
               <div>
@@ -45,16 +45,16 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-10 h-10 bg-soft-peach/60 rounded-xl flex items-center justify-center text-terracotta hover:bg-soft-peach transition-all duration-300">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -62,12 +62,12 @@ const Footer = () => {
 
           {/* Links Sections */}
           <div className="md:col-span-3 grid md:grid-cols-3 gap-8">
-            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div>
               <h4 className="text-warm-brown font-poppins font-semibold text-lg mb-4">Product</h4>
               <ul className="space-y-3">
                 {footerLinks.product.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-all duration-300 hover:scale-105 inline-block">
+                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-colors duration-300">
                       {link.name}
                     </a>
                   </li>
@@ -75,12 +75,12 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div>
               <h4 className="text-warm-brown font-poppins font-semibold text-lg mb-4">Company</h4>
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-all duration-300 hover:scale-105 inline-block">
+                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-colors duration-300">
                       {link.name}
                     </a>
                   </li>
@@ -88,12 +88,12 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div>
               <h4 className="text-warm-brown font-poppins font-semibold text-lg mb-4">Legal</h4>
               <ul className="space-y-3">
                 {footerLinks.legal.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-all duration-300 hover:scale-105 inline-block">
+                    <a href={link.href} className="text-warm-brown/70 hover:text-terracotta font-poppins text-sm font-medium transition-colors duration-300">
                       {link.name}
                     </a>
                   </li>
@@ -104,7 +104,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-cream/30 pt-8 flex flex-col md:flex-row justify-between items-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
+        <div className="border-t border-cream/30 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-warm-brown/60 font-poppins text-sm font-medium mb-4 md:mb-0">
             © 2024 Journely. All rights reserved.
           </p>

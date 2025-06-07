@@ -91,15 +91,15 @@ const SubscriptionSection = () => {
     <section id="pricing" className="w-full max-w-6xl mx-auto px-4 py-20">
       {/* Newsletter Section */}
       <div className="text-center mb-20">
-        <div className="bg-card-gradient backdrop-blur-md border border-cream/30 rounded-3xl p-8 max-w-2xl mx-auto shadow-xl animate-fade-in">
+        <div className="bg-card-gradient backdrop-blur-md border border-cream/30 rounded-3xl p-8 max-w-2xl mx-auto shadow-xl">
           <div className="flex items-center justify-center mb-6">
-            <Mail className="w-8 h-8 text-terracotta mr-3 animate-glow" />
+            <Mail className="w-8 h-8 text-terracotta mr-3" />
             <h3 className="text-2xl font-poppins font-bold text-warm-brown">Subscribe to Our Self-Care Newsletter</h3>
           </div>
           <p className="text-warm-brown/70 font-poppins mb-6 font-medium">
             Get weekly journaling prompts, mindfulness tips, and inspiration delivered to your inbox
           </p>
-          <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4">
             <Input
               type="email"
               placeholder="Enter your email address"
@@ -110,7 +110,7 @@ const SubscriptionSection = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-peach-gradient hover:opacity-90 text-warm-brown border border-cream/60 px-8 py-3 font-poppins font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-peach-gradient hover:opacity-90 text-warm-brown border border-cream/60 px-8 py-3 font-poppins font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {isSubmitting ? 'Subscribing...' : 'Subscribe'}
             </Button>
@@ -120,28 +120,28 @@ const SubscriptionSection = () => {
 
       {/* Pricing Section */}
       <div className="text-center mb-16">
-        <div className="inline-flex items-center bg-soft-peach/60 backdrop-blur-md border border-cream/40 rounded-full px-6 py-3 mb-8 animate-float">
-          <Crown className="w-5 h-5 text-terracotta mr-2 animate-glow" />
+        <div className="inline-flex items-center bg-soft-peach/60 backdrop-blur-md border border-cream/40 rounded-full px-6 py-3 mb-8">
+          <Crown className="w-5 h-5 text-terracotta mr-2" />
           <span className="text-warm-brown font-poppins text-sm font-medium">Choose Your Plan</span>
         </div>
         
-        <h2 className="text-5xl md:text-6xl font-poppins font-bold text-warm-brown mb-6 animate-fade-in">
+        <h2 className="text-5xl md:text-6xl font-poppins font-bold text-warm-brown mb-6">
           Start Your
-          <span className="block bg-gradient-to-r from-terracotta to-peach bg-clip-text text-transparent animate-glow">
+          <span className="block bg-gradient-to-r from-terracotta to-peach bg-clip-text text-transparent">
             Journey Today
           </span>
         </h2>
         
-        <p className="text-xl text-warm-brown/70 font-poppins max-w-4xl mx-auto font-medium animate-fade-in" style={{ animationDelay: '0.1s' }}>
+        <p className="text-xl text-warm-brown/70 font-poppins max-w-4xl mx-auto font-medium">
           Transform your daily thoughts into beautiful video memories with our AI-powered journaling platform
         </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-8">
         {plans.map((plan, index) => (
-          <Card key={index} className={`relative bg-gradient-to-br ${plan.gradient} border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in`} style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
+          <Card key={index} className={`relative bg-gradient-to-br ${plan.gradient} border-cream/30 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300`}>
             {plan.popular && (
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-terracotta to-peach text-white px-6 py-2 rounded-full text-sm font-poppins font-semibold shadow-lg animate-glow">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-terracotta to-peach text-white px-6 py-2 rounded-full text-sm font-poppins font-semibold shadow-lg">
                 <Star className="w-4 h-4 inline mr-1" />
                 Most Popular
               </div>
@@ -173,14 +173,14 @@ const SubscriptionSection = () => {
               ))}
             </ul>
 
-            <Button className={`w-full py-4 font-poppins font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${plan.popular ? 'bg-gradient-to-r from-warm-brown to-terracotta text-cream hover:opacity-90' : 'bg-card-gradient text-warm-brown border border-cream/60 hover:bg-soft-peach/40'}`}>
+            <Button className={`w-full py-4 font-poppins font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl ${plan.popular ? 'bg-gradient-to-r from-warm-brown to-terracotta text-cream hover:opacity-90' : 'bg-card-gradient text-warm-brown border border-cream/60 hover:bg-soft-peach/40'}`}>
               {plan.buttonText}
             </Button>
           </Card>
         ))}
       </div>
 
-      <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+      <div className="text-center mt-12">
         <p className="text-warm-brown/60 font-poppins text-sm">
           All plans include end-to-end encryption and privacy protection • Cancel anytime
         </p>
