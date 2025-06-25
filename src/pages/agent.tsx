@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Header } from '@/components/Header';
+import Header from '@/components/Header';
 import { AgentHeroSection } from '@/components/AgentHeroSection';
-import { Footer } from '@/components/Footer';
+import Footer from '@/components/Footer';
 
 const Agent = () => {
   return (

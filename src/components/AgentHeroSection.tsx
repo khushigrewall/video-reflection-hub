@@ -2,9 +2,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Phone, MessageCircle, Globe, Users } from 'lucide-react';
-import Link from 'next/link';
+import { useNavigate } from 'react-router-dom';
 
 export const AgentHeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-20 lg:py-28 animate-fade-in">
       <div className="text-center mb-16 animate-slide-in-up">
@@ -24,16 +26,19 @@ export const AgentHeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-delayed-long">
-          <Link href="/dashboard">
-            <Button className="bg-gradient-to-r from-terracotta to-peach hover:from-peach hover:to-terracotta text-white font-poppins font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              View Dashboard
-            </Button>
-          </Link>
-          <Link href="/setup">
-            <Button variant="outline" className="border-2 border-terracotta text-terracotta hover:bg-terracotta hover:text-white font-poppins font-semibold text-lg px-8 py-4 rounded-full transition-all duration-300">
-              Setup Agent
-            </Button>
-          </Link>
+          <Button 
+            onClick={() => navigate('/dashboard')}
+            className="bg-gradient-to-r from-terracotta to-peach hover:from-peach hover:to-terracotta text-white font-poppins font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            View Dashboard
+          </Button>
+          <Button 
+            onClick={() => navigate('/setup')}
+            variant="outline" 
+            className="border-2 border-terracotta text-terracotta hover:bg-terracotta hover:text-white font-poppins font-semibold text-lg px-8 py-4 rounded-full transition-all duration-300"
+          >
+            Setup Agent
+          </Button>
         </div>
       </div>
 
